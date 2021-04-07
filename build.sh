@@ -2,4 +2,4 @@
 
 shopt -s globstar
 cd source/
-mcs -out:main.dll -target:library -- **/*.cs
+mcs -out:autodeploytonugettest.dll -target:library -- **/*.cs
