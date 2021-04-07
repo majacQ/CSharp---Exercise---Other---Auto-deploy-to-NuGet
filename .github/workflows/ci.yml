@@ -59,4 +59,5 @@ jobs:
           sudo -i
           cd bin/
           chmod a=rwx autodeploytonugettest.dll
+          whoami
           gendarme -- autodeploytonugettest.dll
