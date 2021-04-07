@@ -22,7 +22,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: program
+          name: library
           path: source/autodeploytonugettest.dll
           retention-days: 1
   
@@ -45,8 +45,9 @@ jobs:
 
       - name: Download Artifacts
         uses: actions/download-artifact@v2
+        if: always()
         with:
-          name: program
+          name: library
       - name: CSharp Check
         if: always()
         run: |
