@@ -1,6 +1,6 @@
 namespace AutoDeployToNuget
 {
-  public class A
+  public static class A
   {
     public static void TestMethod()
     {

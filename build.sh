@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 shopt -s globstar
-cd source/
+cd source/ || exit
 mcs -out:autodeploytonugettest.dll -target:library -- **/*.cs
