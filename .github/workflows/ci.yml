@@ -56,5 +56,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install gendarme
+          sudo -i
           cd bin/
-          sudo gendarme -- autodeploytonugettest.dll
+          gendarme -- autodeploytonugettest.dll
