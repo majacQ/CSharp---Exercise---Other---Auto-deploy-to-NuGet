@@ -49,15 +49,11 @@ jobs:
         if: always()
         with:
           name: library
-          path: bin/autodeploytonugettest.dll
+          path: autodeploytonugettest.dll
       
       - name: CSharp Check
         if: always()
         run: |
           sudo apt update
           sudo apt-get install gendarme
-          sudo -i
-          cd bin/
-          chmod a=rwx autodeploytonugettest.dll
-          whoami
           gendarme -- autodeploytonugettest.dll
