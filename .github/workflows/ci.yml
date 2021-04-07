@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ test ]
   pull_request:
-    branches: [ master ]
+    branches: [ test ]
 
   workflow_dispatch:
 
@@ -56,7 +56,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt-get install gendarme
-          chmod +r bin/
+          chmod a=r bin/
           cd bin/
-          chmod +r autodeploytonugettest.dll
+          chmod a=r autodeploytonugettest.dll
           gendarme -- autodeploytonugettest.dll
