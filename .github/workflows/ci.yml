@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: library
-          path: source/autodeploytonugettest.dll
+          path: bin/autodeploytonugettest.dll
           retention-days: 1
   
   lint:
@@ -37,6 +37,7 @@ jobs:
           sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
           npm install -g markdownlint-cli
           markdownlint *.md
+      
       - name: Shell Check
         if: always()
         run: |
@@ -48,9 +49,12 @@ jobs:
         if: always()
         with:
           name: library
+          path: bin/autodeploytonugettest.dll
+      
       - name: CSharp Check
         if: always()
         run: |
           sudo apt update
           sudo apt-get install gendarme
+          cd bin/
           gendarme -- autodeploytonugettest.dll

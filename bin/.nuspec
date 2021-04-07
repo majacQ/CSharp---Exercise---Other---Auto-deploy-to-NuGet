@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AlvinSeville7cf.AutoDeployToNuGetTest</id>
+    <title>Auto deploy to NuGet test</title>
+    <version>1.0.0</version>
+    <authors>Alvin Seville</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/alvinseville7cf/CSharp---Exercise---Other---Auto-deploy-to-NuGet</projectUrl>
+    <repository type="git" url="https://github.com/alvinseville7cf/CSharp---Exercise---Other---Auto-deploy-to-NuGet.git" branch="master"/>
+    <description>Auto deploy to NuGet</description>
+    <copyright>Copyright 2021</copyright>
+    <tags>deploy sample</tags>
+  </metadata>
+</package>
