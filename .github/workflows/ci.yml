@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ test ]
   pull_request:
-    branches: [ master ]
+    branches: [ test ]
 
   workflow_dispatch:
 
@@ -49,14 +49,11 @@ jobs:
         if: always()
         with:
           name: library
-          path: bin/autodeploytonugettest.dll
+          path: autodeploytonugettest.dll
       
       - name: CSharp Check
         if: always()
         run: |
           sudo apt update
           sudo apt-get install gendarme
-          chmod +r bin/
-          cd bin/
-          chmod +r autodeploytonugettest.dll
           gendarme -- autodeploytonugettest.dll
